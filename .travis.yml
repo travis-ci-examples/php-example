@@ -1,0 +1,11 @@
+language: php
+
+# list any PHP version you want to test against
+php:
+  # specify the extend version
+  - 5.3.8
+  # or just the major version
+  - 5.4
+
+# omitting "script:" will default to phpunit
+script: phpunit --coverage-text
