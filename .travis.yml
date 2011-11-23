@@ -1,3 +1,4 @@
+# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
 
 # list any PHP version you want to test against
@@ -6,9 +7,6 @@ php:
   - 5.3.8
   # or just the major version
   - 5.4
-
-# optional before script, for example to install xdebug
-before_script: pyrus install pecl/xdebug
 
 # omitting "script:" will default to phpunit
 script: phpunit --coverage-text
