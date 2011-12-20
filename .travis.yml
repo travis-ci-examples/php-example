@@ -8,5 +8,16 @@ php:
   # or just the major version
   - 5.4
 
+# specify a list of environments, for example to test different RDBMS
+env:
+  - DB=mysql
+  - DB=pgsql
+
+before_script:
+  - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'DROP DATABASE IF EXISTS hello_world_test;' -U postgres; fi"
+  - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'create database hello_world_test;' -U postgres; fi"
+  - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'create database IF NOT EXISTS hello_world_test;' -uroot; fi"
+
 # omitting "script:" will default to phpunit
-script: phpunit --coverage-text
+# use the $DB env variable to determine the phpunit.xml to use
+script: phpunit --configuration phpunit_$DB.xml --coverage-text
