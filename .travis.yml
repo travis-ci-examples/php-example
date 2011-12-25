@@ -3,10 +3,13 @@ language: php
 
 # list any PHP version you want to test against
 php:
-  # specify the extend version
-  - 5.3.8
-  # or just the major version
+  # just the major version
+  - 5.2
+  - 5.3
   - 5.4
+  # or specify the exact version
+  - 5.3.2
+  - 5.3.9RC3
 
 # specify a list of environments, for example to test different RDBMS
 env:
