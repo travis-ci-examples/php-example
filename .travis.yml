@@ -3,19 +3,25 @@ language: php
 
 # list any PHP version you want to test against
 php:
-  # just the major version
-  - 5.2
-  - 5.3
-  - 5.4
-  # or specify the exact version
-  - 5.3.2
-  - 5.3.9RC2
+  # using major version aliases
 
-# specify a list of environments, for example to test different RDBMS
+  # aliased to 5.2.17
+  - 5.2
+  # aliased to 5.3.8
+  - 5.3
+  # aliased to 5.4.0rc3
+  - 5.4
+
+  # or specify exact versions
+  - 5.3.2
+  - 5.3.9rc3
+
+# optionally specify a list of environments, for example to test different RDBMS
 env:
   - DB=mysql
   - DB=pgsql
 
+# execute any number of scripts before the test run, custom env's are available as variables
 before_script:
   - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'DROP DATABASE IF EXISTS hello_world_test;' -U postgres; fi"
   - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'create database hello_world_test;' -U postgres; fi"
@@ -24,3 +30,7 @@ before_script:
 # omitting "script:" will default to phpunit
 # use the $DB env variable to determine the phpunit.xml to use
 script: phpunit --configuration phpunit_$DB.xml --coverage-text
+
+# configure notifications (email, IRC, campfire etc)
+notifications:
+  irc: "irc.freenode.org#travis"
