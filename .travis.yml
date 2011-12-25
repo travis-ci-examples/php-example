@@ -9,7 +9,7 @@ php:
   - 5.4
   # or specify the exact version
   - 5.3.2
-  - 5.3.9RC3
+  - 5.3.9RC2
 
 # specify a list of environments, for example to test different RDBMS
 env:
