@@ -9,7 +9,7 @@ php:
   - 5.2
   # aliased to 5.3.8
   - 5.3
-  # aliased to 5.4.0rc5
+  # aliased to 5.4.0RC6
   - 5.4
 
   # or specify exact versions
