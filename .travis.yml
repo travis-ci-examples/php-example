@@ -12,10 +12,9 @@ php:
   # aliased to 5.4.0RC6
   - 5.4
 
-  # or specify exact versions
+  # additional 5.3.x versions
   - 5.3.2
   - 5.3.8
-  - 5.3.9
 
 # optionally specify a list of environments, for example to test different RDBMS
 env:
