@@ -7,9 +7,9 @@ php:
 
   # aliased to 5.2.17
   - 5.2
-  # aliased to 5.3.8
+  # aliased to 5.3.10
   - 5.3
-  # aliased to 5.4.0RC6
+  # aliased to 5.4.0
   - 5.4
 
   # additional 5.3.x versions
