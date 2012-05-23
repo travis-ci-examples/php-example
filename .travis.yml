@@ -12,9 +12,6 @@ php:
   # aliased to a recent 5.4.x version
   - 5.4
 
-  # additional 5.3.x version that long term support distributions commonly use
-  - 5.3.3
-
 # optionally specify a list of environments, for example to test different RDBMS
 env:
   - DB=mysql
