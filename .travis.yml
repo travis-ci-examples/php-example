@@ -7,14 +7,13 @@ php:
 
   # aliased to 5.2.17
   - 5.2
-  # aliased to 5.3.10
+  # aliased to a recent 5.3.x version
   - 5.3
-  # aliased to 5.4.0
+  # aliased to a recent 5.4.x version
   - 5.4
 
-  # additional 5.3.x versions
-  - 5.3.2
-  - 5.3.8
+  # additional 5.3.x version that long term support distributions commonly use
+  - 5.3.3
 
 # optionally specify a list of environments, for example to test different RDBMS
 env:
