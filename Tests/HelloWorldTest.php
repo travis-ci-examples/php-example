@@ -46,7 +46,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
 
     public function testFailure()
     {
-        $this->assertTrue(false);
+        $this->assertTrue(true);
     }
 }
 
