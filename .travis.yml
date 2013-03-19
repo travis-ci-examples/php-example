@@ -29,4 +29,7 @@ script: phpunit --configuration phpunit_$DB.xml --coverage-text
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-  irc: "irc.freenode.org#travis"
+  email:
+    recipients:
+      - dmartin@fh.org
+    on_success: always # default: change

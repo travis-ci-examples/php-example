@@ -43,5 +43,10 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('Bar', $helloWorld->what());
     }
+
+    public function testFailure()
+    {
+        $this->assertTrue(false);
+    }
 }
 
