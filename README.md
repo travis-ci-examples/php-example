@@ -1,6 +1,8 @@
 Example PHP project
 ===================
 
+This project was forked from https://github.com/travis-ci/travis-ci-php-example (https://github.com/travis-ci/travis-ci-php-example). If you want to play with it, I suggest you get it from there.
+
 The purpose of this repository is to show how to use Travis CI to do
 continuous integration with a PHP project.
 
