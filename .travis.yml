@@ -24,7 +24,6 @@ php:
 env:
   - DB=mysql
   - DB=pgsql
-  - DB=sqlite
 
 # optionally set up exclutions and allowed failures in the matrix
 matrix:
