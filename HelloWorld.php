@@ -22,7 +22,7 @@ class HelloWorld
 
     public function what()
     {
-        $sql = "SELECT what FROM hello";
+        $sql = "SELECT why FROM hello";
         $stmt = $this->pdo->query($sql);
         return $stmt->fetchColumn();
     }
