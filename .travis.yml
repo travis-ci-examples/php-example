@@ -25,7 +25,7 @@ env:
   - DB=mysql
   - DB=pgsql
 
-# optionally set up exclutions and allowed failures in the matrix
+# optionally set up exclusions and allowed failures in the matrix
 matrix:
   exclude:
     - php: hhvm
