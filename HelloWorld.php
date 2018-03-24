@@ -7,6 +7,9 @@ class HelloWorld
      */
     private $pdo;
 
+    /** 
+    * Test Desc
+    */
     public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
