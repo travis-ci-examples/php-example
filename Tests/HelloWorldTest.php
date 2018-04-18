@@ -1,6 +1,6 @@
 <?php
 
-class HelloWorldTest extends PHPUnit_Framework_TestCase
+class HelloWorldTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var PDO
@@ -44,4 +44,3 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('Bar', $helloWorld->what());
     }
 }
-
