@@ -1,8 +1,7 @@
 <?php
-// use the following namespace
-use PHPUnit\Framework\TestCase;
 
-class HelloWorldTest extends TestCase
+class HelloWorldTest extends PHPUnit_Framework_TestCase
+
 {
     /**
      * @var PDO
