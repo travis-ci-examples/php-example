@@ -26,4 +26,10 @@ class HelloWorld
         $stmt = $this->pdo->query($sql);
         return $stmt->fetchColumn();
     }
+
+    public function echoing($what = "test")
+    {
+      return $what;
+    }
 }
+?>
