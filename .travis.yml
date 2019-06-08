@@ -12,6 +12,7 @@ php:
   - hhvm
 
 before_script:
+    - "COMPOSER_ALLOW_XDEBUG=1"
     - composer install --no-interaction
 
 # Testing the app (see phpunit.xml) for configs, generating Code Coverage report
@@ -23,4 +24,3 @@ branches:
   only:
   - master
   - test
-#
