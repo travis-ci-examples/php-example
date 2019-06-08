@@ -4,20 +4,35 @@ language: php
 # list any PHP version you want to test against
 php:
   # using major version aliases
-  - 5.5
-  - 5.6
   - 7.0
   - 7.1
   - 7.2
   - hhvm
+env:
+  - DB=mysql
 
+# optionally set up exclusions and allowed failures in the matrix
+matrix:
+  allow_failures:
+    - php: 7.0
+    - php: hhvm
+
+# execute any number of scripts before the test run, custom env's are available as variables
 before_script:
-    - "COMPOSER_ALLOW_XDEBUG=1"
-    - composer install --no-interaction
+    - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;" -uroot; fi
 
-# Testing the app (see phpunit.xml) for configs, generating Code Coverage report
+# omitting "script:" will default to phpunit
+# use the $DB env variable to determine the phpunit.xml to use
 script:
-  -phpunit Tests/HelloWorldTest
+    - phpunit --configuration phpunit_$DB.xml --coverage-text
+
+# before_script:
+#     - "COMPOSER_ALLOW_XDEBUG=1"
+#     - composer install --no-interaction
+#
+# # Testing the app (see phpunit.xml) for configs, generating Code Coverage report
+# script:
+#   -phpunit Tests/HelloWorldTest
 
 # Monitor only these branches
 branches:
